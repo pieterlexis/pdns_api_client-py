@@ -3,5 +3,7 @@
   "packageName": "pdns_api_client",
   "packageVersion": "0.0.10",
   "projectName": "pdns_api_client",
-  "appName": "pdns_api_client"
+  "appName": "pdns_api_client",
+  "gitUserId": "pieterlexis",
+  "gitRepoId": "pdns_api_client-py"
 }
