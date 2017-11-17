@@ -1,4 +1,4 @@
-# swagger_client.ZonesApi
+# pdns_api_client.ZonesApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -26,17 +26,17 @@ Returns the zone in AXFR format.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -81,17 +81,17 @@ Fails when zone kind is not Master or Slave, or master and slave are disabled in
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -133,17 +133,17 @@ Verify zone contents/configuration.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -186,17 +186,17 @@ Creates a new domain, returns the Zone on creation.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 rrsets = true # bool | “true” (default) or “false”, whether to include the “rrsets” in the response Zone object. (optional) (default to true)
 
@@ -239,17 +239,17 @@ Deletes this zone, all attached metadata and rrsets.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -291,17 +291,17 @@ zone managed by a server
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -344,17 +344,17 @@ List all Zones in a server
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 
 try: 
@@ -397,17 +397,17 @@ Fails when zone kind is not Master or Slave, or master and slave are disabled in
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -449,20 +449,20 @@ Modifies present RRsets and comments. Returns 204 No Content on success.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-zone_struct = swagger_client.Zone() # Zone | The zone struct to patch with
+zone_struct = pdns_api_client.Zone() # Zone | The zone struct to patch with
 
 try: 
     # Modifies present RRsets and comments. Returns 204 No Content on success.
@@ -505,20 +505,20 @@ Allowed fields in client body: all except id, url and name. Returns 204 No Conte
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-zone_struct = swagger_client.Zone() # Zone | The zone struct to patch with
+zone_struct = pdns_api_client.Zone() # Zone | The zone struct to patch with
 
 try: 
     # Modifies basic zone data (metadata).
@@ -561,17 +561,17 @@ This does not take into account the API-RECTIFY metadata. Fails on slave zones a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonesApi()
+api_instance = pdns_api_client.ZonesApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 

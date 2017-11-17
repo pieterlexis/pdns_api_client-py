@@ -1,4 +1,4 @@
-# swagger_client.ZonemetadataApi
+# pdns_api_client.ZonemetadataApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -22,20 +22,20 @@ Creates a set of metadata entries of given kind for the zone. Existing metadata 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonemetadataApi()
+api_instance = pdns_api_client.ZonemetadataApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-metadata = [swagger_client.Metadata()] # list[Metadata] | List of metadata to add/create
+metadata = [pdns_api_client.Metadata()] # list[Metadata] | List of metadata to add/create
 
 try: 
     # Creates a set of metadata entries
@@ -76,17 +76,17 @@ Delete all items of a single kind of domain metadata.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonemetadataApi()
+api_instance = pdns_api_client.ZonemetadataApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 metadata_kind = 'metadata_kind_example' # str | ???
@@ -130,17 +130,17 @@ Get all the MetaData associated with the zone.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonemetadataApi()
+api_instance = pdns_api_client.ZonemetadataApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_zone_metadata_kind**
-> list[Metadata] list_zone_metadata_kind(server_id, zone_id, metadata_kind)
+> Metadata list_zone_metadata_kind(server_id, zone_id, metadata_kind)
 
 Get the content of a single kind of domain metadata as a list of MetaData objects.
 
@@ -183,17 +183,17 @@ Get the content of a single kind of domain metadata as a list of MetaData object
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonemetadataApi()
+api_instance = pdns_api_client.ZonemetadataApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 metadata_kind = 'metadata_kind_example' # str | ???
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Metadata]**](Metadata.md)
+[**Metadata**](Metadata.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modify_zone_metadata_kind**
-> modify_zone_metadata_kind(server_id, zone_id, metadata)
+> modify_zone_metadata_kind(server_id, zone_id, metadata_kind, metadata)
 
 Modify the content of a single kind of domain metadata.
 
@@ -238,24 +238,25 @@ Modify the content of a single kind of domain metadata.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ZonemetadataApi()
+api_instance = pdns_api_client.ZonemetadataApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-metadata = [swagger_client.Metadata()] # list[Metadata] | List of metadata to add/create
+metadata_kind = 'metadata_kind_example' # str | The kind of metadata
+metadata = pdns_api_client.Metadata() # Metadata | metadata to add/create
 
 try: 
     # Modify the content of a single kind of domain metadata.
-    api_instance.modify_zone_metadata_kind(server_id, zone_id, metadata)
+    api_instance.modify_zone_metadata_kind(server_id, zone_id, metadata_kind, metadata)
 except ApiException as e:
     print("Exception when calling ZonemetadataApi->modify_zone_metadata_kind: %s\n" % e)
 ```
@@ -266,7 +267,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **server_id** | **str**| The id of the server to retrieve | 
  **zone_id** | **str**|  | 
- **metadata** | [**list[Metadata]**](Metadata.md)| List of metadata to add/create | 
+ **metadata_kind** | **str**| The kind of metadata | 
+ **metadata** | [**Metadata**](Metadata.md)| metadata to add/create | 
 
 ### Return type
 

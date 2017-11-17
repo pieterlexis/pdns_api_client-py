@@ -1,4 +1,4 @@
-# swagger_client.CryptokeyApi
+# pdns_api_client.CryptokeyApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_crypto_key**
-> create_crypto_key(server_id, zone_id, metadata)
+> Cryptokey create_crypto_key(server_id, zone_id, metadata)
 
 Creates a Cryptokey
 
@@ -22,24 +22,25 @@ This method adds a new key to a zone. The key can either be generated or importe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CryptokeyApi()
+api_instance = pdns_api_client.CryptokeyApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-metadata = [swagger_client.Cryptokey()] # list[Cryptokey] | List of metadata to add/create
+metadata = pdns_api_client.Cryptokey() # Cryptokey | List of metadata to add/create
 
 try: 
     # Creates a Cryptokey
-    api_instance.create_crypto_key(server_id, zone_id, metadata)
+    api_response = api_instance.create_crypto_key(server_id, zone_id, metadata)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling CryptokeyApi->create_crypto_key: %s\n" % e)
 ```
@@ -50,11 +51,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **server_id** | **str**| The id of the server to retrieve | 
  **zone_id** | **str**|  | 
- **metadata** | [**list[Cryptokey]**](Cryptokey.md)| List of metadata to add/create | 
+ **metadata** | [**Cryptokey**](Cryptokey.md)| List of metadata to add/create | 
 
 ### Return type
 
-void (empty response body)
+[**Cryptokey**](Cryptokey.md)
 
 ### Authorization
 
@@ -76,17 +77,17 @@ This method deletes a key specified by cryptokey_id.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CryptokeyApi()
+api_instance = pdns_api_client.CryptokeyApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 cryptokey_id = 'cryptokey_id_example' # str | The id value of the Cryptokey
@@ -122,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_cryptokey**
-> list[Cryptokey] list_cryptokey(server_id, zone_id, cryptokey_id)
+> Cryptokey list_cryptokey(server_id, zone_id, cryptokey_id)
 
 Returns all data about the CryptoKey, including the privatekey.
 
@@ -130,17 +131,17 @@ Returns all data about the CryptoKey, including the privatekey.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CryptokeyApi()
+api_instance = pdns_api_client.CryptokeyApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 cryptokey_id = 'cryptokey_id_example' # str | The id value of the CryptoKey
@@ -163,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Cryptokey]**](Cryptokey.md)
+[**Cryptokey**](Cryptokey.md)
 
 ### Authorization
 
@@ -185,17 +186,17 @@ Get all CryptoKeys for a zone, except the privatekey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CryptokeyApi()
+api_instance = pdns_api_client.CryptokeyApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | The id of the zone to retrieve
 
@@ -230,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modify_cryptokey**
-> modify_cryptokey(server_id, zone_id, cryptokey_id)
+> modify_cryptokey(server_id, zone_id, cryptokey_id, cryptokey)
 
 This method (de)activates a key from zone_name specified by cryptokey_id
 
@@ -238,24 +239,25 @@ This method (de)activates a key from zone_name specified by cryptokey_id
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CryptokeyApi()
+api_instance = pdns_api_client.CryptokeyApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 zone_id = 'zone_id_example' # str | 
-cryptokey_id = [swagger_client.Cryptokey()] # list[Cryptokey] | Cryptokey to manipulate
+cryptokey_id = 'cryptokey_id_example' # str | Cryptokey to manipulate
+cryptokey = pdns_api_client.Cryptokey() # Cryptokey | the Cryptokey
 
 try: 
     # This method (de)activates a key from zone_name specified by cryptokey_id
-    api_instance.modify_cryptokey(server_id, zone_id, cryptokey_id)
+    api_instance.modify_cryptokey(server_id, zone_id, cryptokey_id, cryptokey)
 except ApiException as e:
     print("Exception when calling CryptokeyApi->modify_cryptokey: %s\n" % e)
 ```
@@ -266,7 +268,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **server_id** | **str**| The id of the server to retrieve | 
  **zone_id** | **str**|  | 
- **cryptokey_id** | [**list[Cryptokey]**](Cryptokey.md)| Cryptokey to manipulate | 
+ **cryptokey_id** | **str**| Cryptokey to manipulate | 
+ **cryptokey** | [**Cryptokey**](Cryptokey.md)| the Cryptokey | 
 
 ### Return type
 

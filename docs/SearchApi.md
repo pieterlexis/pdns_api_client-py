@@ -1,4 +1,4 @@
-# swagger_client.SearchApi
+# pdns_api_client.SearchApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -19,17 +19,17 @@ Search the data inside PowerDNS for search_term and return at most max_results. 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi()
+api_instance = pdns_api_client.SearchApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 q = 'q_example' # str | The string to search for
 max = 56 # int | Maximum number of entries to return
@@ -74,17 +74,17 @@ Query the log, filtered by search_term.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi()
+api_instance = pdns_api_client.SearchApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 q = 'q_example' # str | The string to search for
 

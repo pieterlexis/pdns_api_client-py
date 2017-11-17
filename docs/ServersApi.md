@@ -1,4 +1,4 @@
-# swagger_client.ServersApi
+# pdns_api_client.ServersApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -17,17 +17,17 @@ List a server
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ServersApi()
+api_instance = pdns_api_client.ServersApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 
 try: 
@@ -68,17 +68,17 @@ List all servers
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ServersApi()
+api_instance = pdns_api_client.ServersApi()
 
 try: 
     # List all servers

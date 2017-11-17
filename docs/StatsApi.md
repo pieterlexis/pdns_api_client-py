@@ -1,4 +1,4 @@
-# swagger_client.StatsApi
+# pdns_api_client.StatsApi
 
 All URIs are relative to *http://localhost:8081/api/v1*
 
@@ -18,17 +18,17 @@ Query PowerDNS internal statistics. Returns a list of StatisticItem elements.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pdns_api_client
+from pdns_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-swagger_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.StatsApi()
+api_instance = pdns_api_client.StatsApi()
 server_id = 'server_id_example' # str | The id of the server to retrieve
 
 try: 
