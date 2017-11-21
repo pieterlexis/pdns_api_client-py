@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_crypto_key**](ZonecryptokeyApi.md#create_crypto_key) | **POST** /servers/{server_id}/zones/{zone_id}/cryptokeys | Creates a Cryptokey
+[**create_cryptokey**](ZonecryptokeyApi.md#create_cryptokey) | **POST** /servers/{server_id}/zones/{zone_id}/cryptokeys | Creates a Cryptokey
 [**delete_cryptokey**](ZonecryptokeyApi.md#delete_cryptokey) | **DELETE** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | This method deletes a key specified by cryptokey_id.
-[**list_crypto_keys**](ZonecryptokeyApi.md#list_crypto_keys) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys | Get all CryptoKeys for a zone, except the privatekey
 [**list_cryptokey**](ZonecryptokeyApi.md#list_cryptokey) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | Returns all data about the CryptoKey, including the privatekey.
+[**list_cryptokeys**](ZonecryptokeyApi.md#list_cryptokeys) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys | Get all CryptoKeys for a zone, except the privatekey
 [**modify_cryptokey**](ZonecryptokeyApi.md#modify_cryptokey) | **PUT** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | This method (de)activates a key from zone_name specified by cryptokey_id
 
 
-# **create_crypto_key**
-> Cryptokey create_crypto_key(server_id, zone_id, cryptokey)
+# **create_cryptokey**
+> Cryptokey create_cryptokey(server_id, zone_id, cryptokey)
 
 Creates a Cryptokey
 
@@ -39,10 +39,10 @@ cryptokey = pdns_api_client.Cryptokey() # Cryptokey | Add a Cryptokey
 
 try: 
     # Creates a Cryptokey
-    api_response = api_instance.create_crypto_key(server_id, zone_id, cryptokey)
+    api_response = api_instance.create_cryptokey(server_id, zone_id, cryptokey)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ZonecryptokeyApi->create_crypto_key: %s\n" % e)
+    print("Exception when calling ZonecryptokeyApi->create_cryptokey: %s\n" % e)
 ```
 
 ### Parameters
@@ -122,59 +122,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_crypto_keys**
-> list[Cryptokey] list_crypto_keys(server_id, zone_id)
-
-Get all CryptoKeys for a zone, except the privatekey
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import pdns_api_client
-from pdns_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: APIKeyHeader
-pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = pdns_api_client.ZonecryptokeyApi()
-server_id = 'server_id_example' # str | The id of the server to retrieve
-zone_id = 'zone_id_example' # str | The id of the zone to retrieve
-
-try: 
-    # Get all CryptoKeys for a zone, except the privatekey
-    api_response = api_instance.list_crypto_keys(server_id, zone_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ZonecryptokeyApi->list_crypto_keys: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **server_id** | **str**| The id of the server to retrieve | 
- **zone_id** | **str**| The id of the zone to retrieve | 
-
-### Return type
-
-[**list[Cryptokey]**](Cryptokey.md)
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **list_cryptokey**
 > Cryptokey list_cryptokey(server_id, zone_id, cryptokey_id)
 
@@ -218,6 +165,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cryptokey**](Cryptokey.md)
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_cryptokeys**
+> list[Cryptokey] list_cryptokeys(server_id, zone_id)
+
+Get all CryptoKeys for a zone, except the privatekey
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import pdns_api_client
+from pdns_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: APIKeyHeader
+pdns_api_client.configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# pdns_api_client.configuration.api_key_prefix['X-API-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pdns_api_client.ZonecryptokeyApi()
+server_id = 'server_id_example' # str | The id of the server to retrieve
+zone_id = 'zone_id_example' # str | The id of the zone to retrieve
+
+try: 
+    # Get all CryptoKeys for a zone, except the privatekey
+    api_response = api_instance.list_cryptokeys(server_id, zone_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ZonecryptokeyApi->list_cryptokeys: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **server_id** | **str**| The id of the server to retrieve | 
+ **zone_id** | **str**| The id of the zone to retrieve | 
+
+### Return type
+
+[**list[Cryptokey]**](Cryptokey.md)
 
 ### Authorization
 
