@@ -1,7 +1,7 @@
 {
   "appDescription": "API client for the PowerDNS Authoritative Server API. Generated from the swagger definition.",
   "packageName": "pdns_api_client",
-  "packageVersion": "0.0.10.2",
+  "packageVersion": "0.0.13",
   "projectName": "pdns_api_client",
   "appName": "pdns_api_client",
   "gitUserId": "pieterlexis",

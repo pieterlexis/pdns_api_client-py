@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_cryptokey**](ZonecryptokeyApi.md#create_cryptokey) | **POST** /servers/{server_id}/zones/{zone_id}/cryptokeys | Creates a Cryptokey
 [**delete_cryptokey**](ZonecryptokeyApi.md#delete_cryptokey) | **DELETE** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | This method deletes a key specified by cryptokey_id.
-[**list_cryptokey**](ZonecryptokeyApi.md#list_cryptokey) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | Returns all data about the CryptoKey, including the privatekey.
+[**get_cryptokey**](ZonecryptokeyApi.md#get_cryptokey) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | Returns all data about the CryptoKey, including the privatekey.
 [**list_cryptokeys**](ZonecryptokeyApi.md#list_cryptokeys) | **GET** /servers/{server_id}/zones/{zone_id}/cryptokeys | Get all CryptoKeys for a zone, except the privatekey
 [**modify_cryptokey**](ZonecryptokeyApi.md#modify_cryptokey) | **PUT** /servers/{server_id}/zones/{zone_id}/cryptokeys/{cryptokey_id} | This method (de)activates a key from zone_name specified by cryptokey_id
 
@@ -122,8 +122,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_cryptokey**
-> Cryptokey list_cryptokey(server_id, zone_id, cryptokey_id)
+# **get_cryptokey**
+> Cryptokey get_cryptokey(server_id, zone_id, cryptokey_id)
 
 Returns all data about the CryptoKey, including the privatekey.
 
@@ -148,10 +148,10 @@ cryptokey_id = 'cryptokey_id_example' # str | The id value of the CryptoKey
 
 try: 
     # Returns all data about the CryptoKey, including the privatekey.
-    api_response = api_instance.list_cryptokey(server_id, zone_id, cryptokey_id)
+    api_response = api_instance.get_cryptokey(server_id, zone_id, cryptokey_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ZonecryptokeyApi->list_cryptokey: %s\n" % e)
+    print("Exception when calling ZonecryptokeyApi->get_cryptokey: %s\n" % e)
 ```
 
 ### Parameters
